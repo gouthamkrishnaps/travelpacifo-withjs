@@ -3,639 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel-Pacifico</title>
-    <link rel="Icon" type="image/x-icon" href="./images\travel-pacifico-tp-logo.png">
+    <title>Login</title>
 
-    <!-- css file -->
-    <link rel="stylesheet" href="travel.css">
-
-    <!-- js file -->
-    <script src="travel.js"></script>
-    
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-    <!-- javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Clicker+Script&family=Courgette&family=Lumanosimo&family=Ms+Madi&family=Nunito:wght@600&family=Pacifico&family=Parisienne&family=Quicksand:wght@500&family=Raleway:wght@100;200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&family=Signika+Negative&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
+    <!-- js file -->
+    <script src="travel.js"></script>
+    <style>
+        body{
+            background-image: url(images/imageslide\ 3.jpg);
+            background-size: cover;
+            backdrop-filter: blur(3px)
+        }
+        .container-fluid{
+            height: 100vh;
+        }
+        .inputbox{
+            box-shadow: 1px 1px 1px 1px rgba(133, 133, 133, 0.742);
+            background-color: rgba(216, 216, 216, 0.467);
+        }
+        .login-button{
+            display: flex;
+            justify-content: center;
+        }
+        .login-box{
+            box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.338);
+        }
+        .forgot{
+            float: right;
+        }
+        .comments a{
+            text-decoration: none;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            margin-top: 28%;
+            font-size: 60px;
+        }
+        .head{
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 40px;
+            text-shadow: 2px 2px grey;
+        }
+        @media (max-width:1000px){
+            .content{
+                margin-top: 8%;
+            }
+            .msge{
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-        <div class="container-fluid"><!-- navbar -->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
-            <div class="container-fluid">
-              <img src="./images\Picsart_23-08-15_17-55-21-703.png" alt="T P logo"  width="60" height="50">
-                      <a class="navbar-brand p-2 flex-grow-1 text-warning" href="#">Travel Pacifico</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <!-- collapse icon -->
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link btn btn-outline-warning rounded" aria-current="page" href="#home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn btn-outline-warning rounded" href="#content">Our Plans</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn btn-outline-warning rounded" href="#reviews">Reviews</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn btn-outline-warning rounded" href="#register">Registration</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn btn-outline-warning rounded" href="#about">About</a>
-                  </li>
-                </ul>
-                <button class="btn btn-warning text-light" onclick="logout()" type="button"><i class="fa-solid fa-user" style="color: #ffffff;"></i> Logout</button>
-
-              </div>
-            </div>
-          </nav>
-
-        </div>  
-
-        <div class="container-fluid" id="home">
-          <div class="row bgimg position-relative mt-5">  
-            <img src="./images\landing page.jpg" alt="">
-            <div>
-              <div class="quote position-absolute top-50 start-50 translate-middle"><span>FIND THE <span class="text-dark">PERFECT</span> PLACE TO EXPLORE WORLD</span>
-              <span class="subquote"><br>Receive Personalized Experience for Travel,Hotels & More...</span> <br>
-              <div class="subquote">
-                <a class="btn btn-light rounded m-2" href="#">Contact us</a>
-              </div>
-              <div class="home-button">
-                <a class="btn btn-outline-light rounded m-2" href="#">Learn more.....</a>
-            </div>
-              </div>
-            </div>
-          </div>
-          <div class="home-container row mt-3 border border-3 rounded m-4">
-            <div class="col-lg-2 col-ms-12">
-              <span class="navbar-brand fs-4 text-warning">Travel <br> Pacifico</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime, dolorem, laborum accusantium sint numquam dolor repudiandae nam inventore! Quos illum ea laudantium magnam. <span class="subquote">Esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis unde atque! Exercitationem quae, mollitia harum, cupiditate ducimus esse quasi accusamus culpa illo expedita fugit assumenda quisquam et, praesentium possimus.</span>
-              </p>
-            </div>
-            <div class="col-lg-8 col-ms-12"><!-- image slideshow -->
-              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+    <div class="container-fluid">
+        <h1 class="head text-center text-light">Welcome to our <span class="text-warning">Travel Pacifico</span></h1>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="content text-warning">
+                    <span class="fw-bold msge">Explore the new <span class="text-light">world</span></span>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./images\imageslide 1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block ">
-                      <h5 class="review_head fs-1">Aaron Berydan</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <img src="./images\imageslide 2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5 class="review_head fs-1">Antonio Sebastian</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <img src="./images\imageslide 3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5 class="review_head fs-1">Alexei</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images\imageslide 4.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block text-dark">
-                      <h5 class="review_head fs-1">Devin</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images\imageslide 5.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5 class="review_head fs-1">Deigo</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <img src="./images\imageslide 6.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5 class="review_head fs-1">Chris Daniel</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images\imageslide 7.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5 class="review_head fs-1">Marcello</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images\imageslide 8.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block ">
-                      <h5 class="review_head fs-1">Syed khan</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images\imageslide 9.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block text-dark">
-                      <h5 class="review_head fs-1">Steffy</h5>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
             </div>
-            <div class="col-lg-2 col-ms-12">
-              <span class="navbar-brand fs-4 text-warning">Customers<br>Gallery</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime, dolorem, laborum accusantium sint numquam dolor repudiandae nam inventore! Quos illum ea laudantium magnam.<span class="subquote"> odit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia veritatis maiores quod eveniet! Quaerat autem praesentium hic perspiciatis. Nam sunt voluptates maiores non esse, illo voluptatem quam quibusdam facilis dicta?</span>
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class="destinations text-center">
-              <h2 class="review_head text-warning fs-1">Destinations</h2>
-              <h3 class="sub-head fs-1">Choose Your Place</h3>
-            </div>
+            <div class="col-lg-6 col-sm-12">
                 <div class="row">
-                  <div class="col-lg-2 col-md-4 col-sm-12 mt-1 mb-1">
-                    <div class="card package-card" style="width: 100%;">
-                      <div class="packageimg">
-                        <img src="./images\america.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="navbar-brand ">America</h5>
-                        <span class="badge rounded-pill text-bg-warning">12 Days <i class="fa-solid fa-calendar-days" style="color: #000000;"></i></span>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime</p>
-                        <p class="package-rate fs-4">$300</p>
-                        <a href="https://en.wikipedia.org/wiki/United_States" class="btn btn-outline-warning">Check out</a>
-                      </div>
+                    <div class="col-lg-2 col-sm-0"></div>
+                    <div class="col-lg-8 col-sm-12">
+                        <h2 class="text-center text-light mt-5">USER <span style="color: yellow;">L</span>OGIN</h2>
+                        <div class="login-box rounded-5 p-5 mt-4 bg-light">                   
+                            <form>
+                                <div class="">
+                                    <label for="exampleInputEmail1" class="form-label">User name or E-mail</label>
+                                    <input type="text" id="loguser" class="form-control inputbox border border-0" id="exampleInputEmail1" placeholder="username or email">
+                                  <br>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                                  <input type="password" id="logpswd" class="form-control inputbox border border-0" id="exampleInputPassword1" placeholder="password">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <div class="login-button">
+                                    <button type="button" onclick="obj.login()" class="btn btn-outline-warning rounded-pill ps-5 pe-5">Login</button>
+                                </div>
+                              </form>
+                              <div class="comments mt-4">
+                                <a href="./register.html">Don't have an account?</a>
+                                <a class="forgot" onclick="" href="">Forgot password?</a>
+                              </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-sm-12 mt-1 mb-1">
-                    <div class="card package-card" style="width: 100%;">
-                      <div class="packageimg">
-                        <img src="./images\dubai.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="navbar-brand ">Dubai</h5>
-                        <span class="badge rounded-pill text-bg-warning">7 Days <i class="fa-solid fa-calendar-days" style="color: #000000;"></i></span>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime</p>
-                        <p class="package-rate fs-4">$120</p>
-                        <a href="https://en.wikipedia.org/wiki/Dubai" class="btn btn-outline-warning">Check out</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-sm-12 mt-1 mb-1">
-                    <div class="card package-card" style="width: 100%;">
-                      <div class="packageimg">
-                        <img src="./images\canada.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="navbar-brand ">Canada</h5>
-                        <span class="badge rounded-pill text-bg-warning">12 Days <i class="fa-solid fa-calendar-days" style="color: #000000;"></i></span>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime</p>
-                        <p class="package-rate fs-4">$250</p>
-                        <a href="https://en.wikipedia.org/wiki/Canada" class="btn btn-outline-warning">Check out</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-sm-12 mt-1 mb-1">
-                    <div class="card package-card" style="width: 100%;">
-                      <div class="packageimg">
-                        <img src="./images\mali.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="navbar-brand ">Maldives</h5>
-                        <span class="badge rounded-pill text-bg-warning">7 Days <i class="fa-solid fa-calendar-days" style="color: #000000;"></i></span>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime</p>
-                        <p class="package-rate fs-4">$60</p>
-                        <a href="https://en.wikipedia.org/wiki/Maldives" class="btn btn-outline-warning">Check out</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-sm-12 mt-1 mb-1">
-                    <div class="card package-card" style="width: 100%;">
-                      <div class="packageimg">
-                        <img src="./images\london.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="navbar-brand ">London</h5>
-                        <span class="badge rounded-pill text-bg-warning">12 Days <i class="fa-solid fa-calendar-days" style="color: #000000;"></i></span>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime</p>
-                        <p class="package-rate fs-4">$300</p>
-                        <a href="https://en.wikipedia.org/wiki/London" class="btn btn-outline-warning">Check out</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4 col-sm-12 mt-1 mb-1">
-                    <div class="card package-card" style="width: 100%;">
-                      <div class="packageimg">
-                        <img src="./images\singapore.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="navbar-brand ">Singapore</h5>
-                        <span class="badge rounded-pill text-bg-warning">7 Days <i class="fa-solid fa-calendar-days" style="color: #000000;"></i></span>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, laboriosam pariatur odio distinctio saepe maxime</p>
-                        <p class="package-rate fs-4">$100</p>
-                        <a href="https://en.wikipedia.org/wiki/Singapore" class="btn btn-outline-warning">Check out</a>
-                      </div>
-                    </div>
-                  </div>
+                    <div class="col-lg-2 col-sm-0"></div>
                 </div>
-          </div>
+
+            </div>
         </div>
-
-        <div id="content" class="plans text-center m-5">
-          <h2 class="review_head text-warning fs-1">Our Plans</h2><br>
-          <h3 class="sub-head fs-1">Find travel perfection with the <br> wisdom of experts</h3><br>
-          <p class="text-secondary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium temporibus voluptatem unde quis recusandae? Voluptatum natus 
-          </p><br>
-          <div class="row m-3">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card border border-0" style="width: 100%;">
-                <img class="rounded" src="./images\plan1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6>Tell us where you want to explore</h6>
-                  <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card border border-0" style="width: 100%;">
-                <img class="rounded" src="./images\plan2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6>Share your Travel Preference & Dates</h6>
-                  <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card border border-0" style="width: 100%;">
-                <img class="rounded" src="./images\plan4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h6>We w'll give you tailored recommentations</h6>
-                  <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="reviews" id="reviews">
-          <div class="reviews-container position-relative  text-center container-fluid">
-            <h2 class="review_head fs-1 text-warning">Inspirational Stoies</h2>
-            <h3 class="sub-head fs-1">From our customers</h3>
-                <div class="row">
-                  <div class="col-2"></div>
-                  <div class="col-8">
-        
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="card review-card rounded-pill">
-                          <div class="card-body">
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <h5 class="card-title">Emma Watson</h5>
-                            <img class="rounded-circle" src="./images\pexels-ali-pazani-2829373.jpg" alt="" width="100px">
-                            <p class="card-text1 p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, officiis id minima ad magnam dolorem ea tempore voluptates doloremque quis blanditiis vero rerum est ex, molestiae, nam dolores inventore! Voluptatem?</p>
-                            
-                          </div>
-                        </div>
-                      </div>
-        
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="card review-card rounded-pill">
-                          <div class="card-body">
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i><i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <h5 class="card-title">Daniel Radcliffe</h5>
-                            <img class="rounded-circle" src="./images\pexels-sindre-fs-1040945.jpg" alt="" width="100px">
-                            <p class="card-text1 p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, officiis id minima ad magnam dolorem ea tempore voluptates doloremque quis blanditiis vero rerum est ex, molestiae, nam dolores inventore! Voluptatem?</p>
-                            
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-                  <div class="col-2"></div>
-                </div> <br><br>
-
-                <div class="subquote destinations text-center">
-                  <h2 class="review_head text-warning fs-1">Exploring Events</h2>
-                  <h3 class="sub-head fs-1">Our main events</h3>
-                </div>
-
-                <button class="btn btn-outline-warning d-lg-none text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Explore our Events</button>
-                
-                <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title review_head text-warning fs-1" id="offcanvasResponsiveLabel">Our Main Events</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <p class="mb-0">
-                      <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-12 p-2">
-                            <div class="packageimg card text-bg-dark">
-                                <img src="./images\pexels-brady-knoll-5914157.jpg" class="card-img" alt="..." width="100%">
-                                <div class="card-img-overlay">
-                                  <h5 class="card-title1">CAMPING</h5>
-                                  <p class="card-text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium tenetur eaque perferendis iusto voluptatibus quisquam aperiam</p>
-                                  <a href="https://en.m.wikipedia.org/wiki/Camping" class="btn btn-outline-light">Know more</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-12 p-2">
-                            <div class="packageimg card text-bg-dark">
-                                <img src="./images\pexels-david-selbert-6468167.jpg" class="card-img" alt="..." width="100%">
-                                <div class="card-img-overlay">
-                                  <h5 class="card-title1">HUNTING</h5>
-                                  <p class="card-text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium tenetur eaque perferendis iusto voluptatibus quisquam aperiam</p>
-                                  <a href="https://en.m.wikipedia.org/wiki/Hunting" class="btn btn-outline-light">Know more</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-12 p-2">
-                            <div class="packageimg card text-bg-dark">
-                                <img src="./images\pexels-med-gadon-2425664.jpg" class="card-img" alt="..." width="100%">
-                                <div class="card-img-overlay">
-                                  <h5 class="card-title1">SWIMMING</h5>
-                                  <p class="card-text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium tenetur eaque perferendis iusto voluptatibus quisquam aperiam</p>
-                                  <a href="https://en.m.wikipedia.org/wiki/Swimming_(sport)" class="btn btn-outline-light">Know more</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-12 p-2">
-                            <div class="packageimg card text-bg-dark">
-                                <img src="./images\skiing.jpg" class="card-img" alt="..." width="100%">
-                                <div class="card-img-overlay">
-                                  <h5 class="card-title1">Skiing</h5>
-                                  <p class="card-text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium tenetur eaque perferendis iusto voluptatibus quisquam aperiam</p>
-                                  <a href="https://en.m.wikipedia.org/wiki/Boating" class="btn btn-outline-light">Know more</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-12 p-2">
-                            <div class="packageimg card text-bg-dark">
-                                <img src="./images\trekking new.jpg" class="card-img" alt="..." width="100%">
-                                <div class="card-img-overlay">
-                                  <h5 class="card-title1">TREKKING</h5>
-                                  <p class="card-text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium tenetur eaque perferendis iusto voluptatibus quisquam aperiam</p>
-                                  <a href="https://en.m.wikipedia.org/wiki/Hiking" class="btn btn-outline-light">Know more</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-12 p-2">
-                            <div class="packageimg card text-bg-dark">
-                                <img src="./images\pexels-tobit-nazar-nieto-hernandez-3026336.jpg" class="card-img" alt="..." width="100%">
-                                <div class="card-img-overlay">
-                                  <h5 class="card-title1">MUD RACING</h5>
-                                  <p class="card-text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae praesentium tenetur eaque perferendis iusto voluptatibus quisquam aperiam</p>
-                                  <a href="https://en.m.wikipedia.org/wiki/Obstacle_course_racing" class="btn btn-outline-light">Know more</a>
-                                </div>
-                              </div>
-                        </div>
-                      </div>
-
-                    </p>
-                  </div>
-                </div>
-
-          </div>
-        </div>
-      
-        <div class="register " id="register">
-        <div class="container-fluid register-container position-relative" id="register">
-            <div class="head-container text-center">
-              <h2 class="review_head text-warning fs-1 p-3">Register for Our Service</h2>
-              <h3 class="sub-head fs-1">Let's start journey together.</h3>
-              <span>Reach us via : <a class="btn text-primary" href="travelpacificousa@gmail.com">travelpacificousa@gmail.com</a></span>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-ms-0"></div>
-              <div class="col-lg-6 col-ms-12">
-                    <form class="row g-3">
-                      <div class="col-md-6 form-floating">
-                        
-                        <input type="text" class="form-control border border-0" placeholder="Aasif" id="inputfirstname">
-                        <label for="inputfirstname" class="form-label">First name</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        
-                        <input type="text" class="form-control border border-0" placeholder="Muhammad" id="inputlastname">
-                        <label for="inputlastname" class="form-label">Last name</label>
-                      </div>
-                      <div class="col-12 form-floating">
-                        
-                        <input type="text" class="form-control border border-0" id="inputAddress" placeholder="1234 Main St">
-                        <label for="inputAddress" class="form-label">Address</label>
-                      </div>
-                      <div class="col-12 form-floating">
-                        
-                        <input type="text" class="form-control border border-0" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                        <label for="inputAddress2" class="form-label">Address 2</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input type="email" class="form-control border border-0" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        
-                        <input type="number" class="form-control border border-0" placeholder="983654XXX1" id="inputphone">
-                        <label for="inputphone" >Phone</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        
-                        <input type="text" class="form-control border border-0" placeholder="Place" id="inputcity">
-                        <label for="inputcity" class="form-label">City</label>
-                      </div>
-                      <div class="col-md-4 form-floating">
-                        <select id="inputState" class="form-select  border border-0">
-                          <option selected>Choose state</option>
-                          <option>Kerala</option>
-                          <option>Karnataka</option>
-                          <option>Tamil Nadu</option>
-                          <option>Telungana</option>
-                          <option>Mumbai</option>
-                          <option>Maharastra</option>
-                          <option>Delhi</option>
-                          <option>Jammu & kashmir</option>
-                          <option>Goa</option>
-                          <option>Rajasthan</option>
-                        </select>
-                      </div>
-                      <div class="col-md-2 form-floating">
-                        
-                        <input type="text" class="form-control border border-0" placeholder="zip" id="inputZip">
-                        <label for="inputZip" class="form-label">Zip</label>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="gridCheck">
-                          <label class="form-check-label" for="gridCheck">
-                            <span class="text-dark">Check me out</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <button type="submit" class="btn btn-outline-warning">Submit</button>
-                        <button type="Reset" class="btn btn-warning">Reset</button>
-                      </div>
-                    </form>
-              </div>
-              <div class="col-lg-3 col-ms-0"></div>
-            </div>
-          </div>
-  
-        </div>
-
-        <div class="footer" id="about">
-          <div class="footer-container text-light container-fluid bg-dark">
-            <div class="row p-4">
-              <div class="col-lg-4 col-sm-12 border-end border-1 border-secondary">
-                <a class="navbar-brand p-2 text-warning fs-4" href="#top">Travel Pacifico</a><br>
-                <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus deleniti aspernatur possimus ad illum similique consequuntur, voluptatem rerum repudiandae facere fugiat ipsam quos sint voluptates accusamus qui eligendi dolores placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus atque ex officiis, possimus quibusdam repellat.!</p>
-                <h6>Our Partners</h6>
-                <div class="row">
-                  <div class="col-3">
-                    <img class="mt-4" src="./images\1-coca-cola-logo-png-image.png" alt="" width="80px">
-                  </div>
-                  <div class="col-3">
-                    <img src="./images\american-airlines-logo-0.png" alt="" width="80px">
-                  </div>
-                  <div class="col-3">
-                    <img class="mt-4" src="./images\google-logo-png-hd-11-1536x512.png" alt="" width="80px">
-                  </div>
-                  <div class="col-3">
-                    <img class="mt-4" src="./images\LULU+logo.png" alt="" width="80px">
-                  </div>
-                </div>
-              </div>
-              <div class="col-8">
-                <div class="row">
-                  <div class="col-lg-3 col-md-6 border-end border-1 border-secondary">
-                    <h6 class="text-warning navbar-brand">GET IN TOUCH</h6>
-                    <br>
-                    <h6><i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i> Address</h6>
-                      <p class="text-secondary">Peredrift <br>
-                      65 West 54th Street <br>
-                      Newyork, NY 1009</p>
-                    <h6><i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i> Support Phone</h6>
-                    <p class="text-secondary">983-632-783-627</p>  
-                    <h6><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> E-mail Address</h6>
-                    <p class="text-secondary">travelpacificousa@gmail.com</p>
-
-                  </div>
-                  <div class="col-lg-3 col-md-6 border-end border-1 border-secondary">
-                    <h6 class="text-warning navbar-brand">ABOUT US</h6> <br>
-                    <P>How it Works</P>
-                    <P>Start Planning</P>
-                    <P>About Us</P>
-                    <P>Blog</P>
-                    <P>Reviews</P>
-                    <P>Trip Inspiration</P>
-                    <P>Contact Us</P>
-                  </div>
-                  <div class=" col-lg-3 col-md-6 border-end border-1 border-secondary">
-                    <h6 class="text-warning navbar-brand">FROM THE BLOG</h6><br>
-                    <p>Travelling Guides</p>
-                    <p>Planning Your Trip</p>
-                    <p>Product Guides</p>
-                    <p>Guest Reviews</p>
-                    <p>Destinations</p>
-                    <p>Tours</p>
-                    <p>Webinars</p>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                    <h6 class="text-warning navbar-brand">OUR SOCIAL MEDIA <br>HANDLES</h6><br>
-                    <p class="text-secondary">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut quam iure alias ipsum ducimus animi quisquam 
-                    </p>
-                    <div class="row">
-                      <div class="mediaicons col-2">
-                        <i class="fa-brands fa-x-twitter fa-2x" style="color: #ffffff;"></i>
-                      </div>
-                      <div class="mediaicons col-2">
-                        <i class="fa-brands fa-instagram fa-2x" style="color: #ffffff;"></i>
-                      </div>
-                      <div class="mediaicons col-2">
-                        <i class="fa-brands fa-linkedin fa-2x" style="color: #ffffff;"></i>
-                      </div>
-                      <div class="mediaicons col-2">
-                        <i class="fa-brands fa-facebook-f fa-2x" style="color: #ffffff;"></i>
-                      </div>
-                      <div class="mediaicons col-2">
-                        <i class="fa-brands fa-whatsapp fa-2x" style="color: #ffffff;"></i>
-                      </div>
-                      <div class="mediaicons col-2">
-                        <i class="fa-brands fa-youtube fa-2x" style="color: #ffffff;"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="copyright  text-center p-5">
-                <label><span><i class="fa-solid fa-copyright"></i></span> My Website 2023.All Rights Reserved <span><i class="fa-solid fa-registered"></i></span> Travel Pacifico </label>
-              </div>
-
-            </div>
-          </div>
-        </div>
+     
+    </div>
 </body>
-<script>
-  let user=localStorage.getItem('user')
-  console.log(user);
-  //usersub.innerHTML=user
-
-  if(!user){
-    alert('Please login')
-    window.location='login.html'
-  }
-  else{
-    usersub.innerHTML=user
-  }
-
-  function logout(){
-    s=confirm("Are you sure , you want to logout?")
-    if(s==true){
-      localStorage.removeItem('user')
-    //navigate to login page
-    window.location='login.html'
-    }
-    else{
-      alert('Thank you for staying here')
-    }
-  }
-</script>
 </html>

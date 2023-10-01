@@ -51,7 +51,7 @@ class Landing{
                 console.log(this.travelUsers);
                 alert('Registration completed succesfully')
                 this.saveData()
-                window.location='login.html'
+                window.location='index.html'
             }
         }
     }
@@ -70,7 +70,7 @@ class Landing{
                 if(this.travelUsers[user].password==pswd){
                     alert('Login completed successfully')
                     localStorage.setItem('user',user)
-                    window.location='./index.html'
+                    window.location='./home.html'
                 }
                 else{
                     alert('Invalid password entered')
