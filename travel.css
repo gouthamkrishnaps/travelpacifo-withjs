@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0px;
+    /* overflow-x: hidden; */
+}
+.navbar-brand{
+    font-family: 'Cinzel Decorative', cursive;
+}
+.navbar{
+    box-shadow: 0px 0px 10px 0px rgb(67, 68, 67);
+}
+.quote{
+    text-shadow: 2px 2px gray;
+    font-family: 'Cinzel Decorative', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.subquote{
+    font-size: 15px;
+}
+@media (max-width:1000px){
+    .subquote{
+        display:none;
+    }
+    .quote{
+        font-size: 20px;
+    }
+}
+.home-container{
+    box-shadow: 10px 10px 10px 0px rgb(69, 70, 69);
+}
+.package-card:hover{
+    transform: rotatey(360deg);
+    transition: 2s;
+}
+.packageimg{
+    overflow: hidden;
+}
+.packageimg:hover img{
+    transform: scale(1.4);
+    transition: 500ms;
+}
+.register{
+    background-image: url(images/registerbg.png);
+    margin-bottom: 15px;
+}
+.reg-head{
+    font-family: 'Cinzel Decorative', cursive;
+}
+.register-container:hover{
+    backdrop-filter: blur(2px);
+    transition: 500ms;
+}
+.review-card:hover{
+    box-shadow: 10px 10px 10px 0px rgb(70, 69, 69);
+    transition: 300ms;
+}
+.review_head{
+    font-family: 'Clicker Script', cursive;
+    font-weight: 800;
+}
+.sub-head{
+    font-family: 'Signika Negative', sans-serif;
+}
+@media (max-width:1200px){
+    #baseimg1{
+        visibility: hidden;
+    }
+}
+.reg-img{
+    border-radius: 30px;
+}
+.mediaicons {
+    font-size: 12px;
+    opacity: .6;
+}
+.mediaicons:hover{
+    opacity: 1;
+    transition: 500ms;
+}
+@media (max-width:800px){
+
+    .review_head{
+        font-size: 50px;
+    }
+    .imgtest{
+        visibility: hidden;
+    }    
+}
+.form-control,.form-select{
+    box-shadow: 1px 1px 1px 1px rgba(189, 187, 187, 0.8);
+}
+.card-title1{
+    font-family: 'Cinzel Decorative', cursive;
+    text-shadow: 2px 2px black;
+}
+.card-img-overlay:hover{
+    background-color: rgba(0, 0, 0, 0.452);
+    transition: 500ms;
+}
+.card-text3{
+    text-shadow: 2px 2px black;
+}
