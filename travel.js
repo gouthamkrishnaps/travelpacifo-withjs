@@ -52,6 +52,7 @@ class Landing{
                 alert('Registration completed succesfully')
                 this.saveData()
                 window.location='index.html'
+                
             }
         }
     }
@@ -71,6 +72,7 @@ class Landing{
                     alert('Login completed successfully')
                     localStorage.setItem('user',user)
                     window.location='./home.html'
+                    alert("Your account has been created🚀")
                 }
                 else{
                     alert('Invalid password entered')
@@ -85,3 +87,5 @@ class Landing{
 
 }
 const obj=new Landing()
+obj.getData()
+obj.saveData()
